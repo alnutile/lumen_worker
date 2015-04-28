@@ -1,0 +1,13 @@
+#!/usr/bin/make -f
+# export DH_VERBOSE=1
+
+# HARDENING in GCC (needed to use LDFLAGS below)
+export DEB_BUILD_MAINT_OPTIONS = hardening=+all
+DPKG_EXPORT_BUILDFLAGS = 1
+include /usr/share/dpkg/buildflags.mk
+
+# Removing useless package dependencies
+LDFLAGS += -Wl,--as-needed
+
+%:
+	dh $@ --parallel

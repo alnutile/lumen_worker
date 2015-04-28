@@ -1,0 +1,87 @@
+jp2a (1.0.6-4) unstable; urgency=low
+
+  * Acknowledge NMU. Thanks to Matthias Klose and Julien Cristau.
+    (Closes: #618208, #642983)
+  * Migrations:
+      - debian format from 1.0 to 3.0. (Closes: #664410)
+      - debian/copyright to new format (1.0).
+      - debian/rules: to new (reduced) format.
+      - debhelper version from 7 to 9.
+      - patch system from dpatch to quilt.
+  * debian/control:
+      - Added dpkg-dev in Build-Depends field.
+      - Added ${misc:Depends} in Depends field.
+      - Improved long description.
+      - Removed screenshot reference from long description.
+      - Updated Standards-Version from 3.8.3 to 3.9.4.
+      - Updated VCS from svn to git.
+  * debian/copyright: updated years from Debian packaging.
+  * debian/README.source: removed because it is useless now.
+  * debian/rules: added "LDFLAGS += -Wl,--as-needed" to avoid
+    messages from dpkg-shlibdeps about ununsed linked libraries.
+
+ -- Joao Eriberto Mota Filho <eriberto@eriberto.pro.br>  Thu, 02 May 2013 11:07:33 -0300
+
+jp2a (1.0.6-3.2) unstable; urgency=low
+
+  * Non-maintainer upload.
+  * Build-Depend on libjpeg-dev, not libjpeg62-dev (closes: #642983)
+
+ -- Julien Cristau <jcristau@debian.org>  Sun, 29 Jan 2012 18:14:41 +0100
+
+jp2a (1.0.6-3.1) unstable; urgency=low
+
+  * Non maintainer upload.
+  * Build-depend on libcurl4-gnutls-dev. Closes: #618208. LP: #836803.
+
+ -- Matthias Klose <doko@debian.org>  Mon, 29 Aug 2011 17:56:28 +0200
+
+jp2a (1.0.6-3) unstable; urgency=low
+
+  * Added patch directory and patch 01 to fix man page.
+  * Updated debhelper version from 5 to 7.
+  * Used dpatch to manage patches.
+
+  * debian/control:
+      - Added libncurses5-dev to Build-Depends field to avoid a warning from
+        configure script.
+      - Updated Standards-Version from 3.7.2 to 3.8.3.
+      - Updated Vcs-Svn and Vcs-Browser from debian-br-team/unstable/jp2a to
+        debian-br-team/packages/jp2a.
+
+  * debian/copyright:
+      - Changed, in packaging copyright information, from the expression "(C)"
+        to word "Copyright".
+      - Updated path of the local GPL text.
+      - Updated packaging copyright from 2007 to 2007-2009.
+
+  * debian/docs:
+      - Removed. The README file tells about program compilation. The
+        man/jp2a.html file has the same content of the man page.
+
+  * debian/rules:
+      - Added /debian/README.source reference to dh_installdocs.
+      - Changed from "dh_clean -k" to "dh_prep" in install target.
+      - Removed comments about binary-indep and binary-arch.
+      - Removed build redundancy from binary-arch target.
+      - Removed binary-indep from binary target.
+      - Removed unused dh_installman from binary-arch target.
+      - Removed some whitespaces at end of lines.
+
+ -- Joao Eriberto Mota Filho <eriberto@eriberto.pro.br>  Tue, 25 Aug 2009 13:07:46 -0300
+
+jp2a (1.0.6-2) unstable; urgency=low
+
+  * Fixed debian/rules to don't ignore make clean errors.
+  * Changed XS-X-Vcs-Svn to Vcs-Svn in debian/control.
+  * Added Homepage and Vcs-Browser fields in debian/control.
+  * Added Screenshot in long description.
+  * Removed NEWS from debian/docs.
+
+ -- Joao Eriberto Mota Filho <eriberto@eriberto.pro.br>  Sun, 09 Sep 2007 12:09:26 -0300
+
+jp2a (1.0.6-1) unstable; urgency=low
+
+  * Initial release (Closes: #409639)
+
+ -- Joao Eriberto Mota Filho <eriberto@eriberto.pro.br>  Fri, 16 Mar 2007 11:40:04 -0300

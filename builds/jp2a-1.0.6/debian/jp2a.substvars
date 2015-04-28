@@ -1,0 +1,2 @@
+shlibs:Depends=libc6 (>= 2.7), libcurl3-gnutls (>= 7.16.2), libjpeg8 (>= 8c), libtinfo5
+misc:Depends=

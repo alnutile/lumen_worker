@@ -1,0 +1,15 @@
+Package: jp2a
+Version: 1.0.6-4
+Architecture: amd64
+Maintainer: Joao Eriberto Mota Filho <eriberto@eriberto.pro.br>
+Installed-Size: 37
+Depends: libc6 (>= 2.7), libcurl3-gnutls (>= 7.16.2), libjpeg8 (>= 8c), libtinfo5
+Section: graphics
+Priority: optional
+Homepage: http://csl.sublevel3.org/jp2a
+Description: converts jpg images to ascii
+ Small utility that converts JPG images to ASCII using libjpeg.
+ jp2a is very flexible. It can use ANSI colors and html in output.
+ .
+ jp2a can also download and convert images from the Internet via
+ command line.

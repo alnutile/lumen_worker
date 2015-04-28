@@ -1,0 +1,41 @@
+Format: 1.8
+Date: Thu, 02 May 2013 11:07:33 -0300
+Source: jp2a
+Binary: jp2a
+Architecture: amd64
+Version: 1.0.6-4
+Distribution: unstable
+Urgency: low
+Maintainer: Joao Eriberto Mota Filho <eriberto@eriberto.pro.br>
+Changed-By: Joao Eriberto Mota Filho <eriberto@eriberto.pro.br>
+Description: 
+ jp2a       - converts jpg images to ascii
+Closes: 618208 642983 664410
+Changes: 
+ jp2a (1.0.6-4) unstable; urgency=low
+ .
+   * Acknowledge NMU. Thanks to Matthias Klose and Julien Cristau.
+     (Closes: #618208, #642983)
+   * Migrations:
+       - debian format from 1.0 to 3.0. (Closes: #664410)
+       - debian/copyright to new format (1.0).
+       - debian/rules: to new (reduced) format.
+       - debhelper version from 7 to 9.
+       - patch system from dpatch to quilt.
+   * debian/control:
+       - Added dpkg-dev in Build-Depends field.
+       - Added ${misc:Depends} in Depends field.
+       - Improved long description.
+       - Removed screenshot reference from long description.
+       - Updated Standards-Version from 3.8.3 to 3.9.4.
+       - Updated VCS from svn to git.
+   * debian/copyright: updated years from Debian packaging.
+   * debian/README.source: removed because it is useless now.
+   * debian/rules: added "LDFLAGS += -Wl,--as-needed" to avoid
+     messages from dpkg-shlibdeps about ununsed linked libraries.
+Checksums-Sha1: 
+ ef7edd2522af2c10145928191ce2115638e68c2b 17734 jp2a_1.0.6-4_amd64.deb
+Checksums-Sha256: 
+ 2bb3c8d5005e4551855134279d86005944f03f3ed0a1f824da841e71d6638a1f 17734 jp2a_1.0.6-4_amd64.deb
+Files: 
+ 873deccef9dd7ef0326d0f3f0a609658 17734 graphics optional jp2a_1.0.6-4_amd64.deb
