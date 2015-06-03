@@ -1,7 +1,10 @@
 <?php
 require __DIR__ . '/../../vendor/autoload.php';
 $app = require_once __DIR__ . '/../../bootstrap/app.php';
-require_once __DIR__ . '/helper.php';
+
+if(!function_exists('getPayload'))
+    require_once __DIR__ . '/helper.php';
+    
 use Illuminate\Encryption\Encrypter;
 $app->boot();
 function decryptPayload($payload)
